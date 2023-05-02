@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .container1{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #btn{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 3px solid green;
+            padding: 15px;
+           margin-top: 38px;
+        }
+    </style>
+</head>
+<body>
+       <image id="Bulb" class="container1" src="assets/bulboff.jpg" alt="Bulb Image"/>
+       <button id="btn">Turn On</button>
+    
+</body>
+<script>
+    const btn=document.getElementById("btn")
+    const bulb=document.getElementById("Bulb")
+     btn.addEventListener('click',clickMe);
+     function clickMe(){
+        if(btn.textContent.includes("On")){
+            btn.textContent="Off";
+            bulb.src="assets/BulbOn.jpg"
+        }
+        else{
+            btn.textContent="On";
+            bulb.src="assets/bulboff.jpg";
+        }
+     }
+</script>
+</html>
